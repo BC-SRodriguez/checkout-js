@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.220.1-alpha.1655749938133](https://github.com/bigcommerce/checkout-js/compare/v1.210.2...v1.220.1-alpha.1655749938133) (2022-06-20)
+
+
+### Features
+
+* **checkout:** CHECKOUT-6265 Add build script to generate export file that can automatically surface new payment integrations ([43b89c1](https://github.com/bigcommerce/checkout-js/commit/43b89c12211788ad713840d7e1fbe29ece769388))
+* **checkout:** CHECKOUT-6265 Render resolved component and inject dependencies ([1d74990](https://github.com/bigcommerce/checkout-js/commit/1d749906fc6109cf7b819ca5709c73646740807a))
+* **checkout:** CHECKOUT-6628 Add 6 language translations ([#872](https://github.com/bigcommerce/checkout-js/issues/872)) ([052e612](https://github.com/bigcommerce/checkout-js/commit/052e6126d9a0512bdf72d2f269626466aeb843fd))
+* **checkout:** CHECKOUT-6643 add billingSameAsShipping check for checkout ([#871](https://github.com/bigcommerce/checkout-js/issues/871)) ([c957c2d](https://github.com/bigcommerce/checkout-js/commit/c957c2dd56b311260faa0acfe02a66576f1e826b))
+* **checkout:** CHECKOUT-6652 provide accessibility label for AddressSelect ([#867](https://github.com/bigcommerce/checkout-js/issues/867)) ([d102ba9](https://github.com/bigcommerce/checkout-js/commit/d102ba982c8d6a50496284d0c4333f6d378f83bd))
+* **checkout:** CHECKOUT-6703 bump checkout-sdk-js version 1.248.0 ([2cbe0ad](https://github.com/bigcommerce/checkout-js/commit/2cbe0adb092e03aea29e9de8a51a75f7dd8679c2))
+* **checkout:** CHECKOUT-6723 Add Norwegian Language ([#883](https://github.com/bigcommerce/checkout-js/issues/883)) ([6baa079](https://github.com/bigcommerce/checkout-js/commit/6baa0798a0d6ebaa9e8b76f32fcb49ddb729da30))
+* **payment:** INT-5060 Stripe UPE Look and Feel. Get styles from store theme styles ([c5a51ee](https://github.com/bigcommerce/checkout-js/commit/c5a51ee13da87b14a4f8226111bb8b8a6aad1eb3))
+* **payment:** INT-5481 Worldpay component ([98a7816](https://github.com/bigcommerce/checkout-js/commit/98a78169bd26ec19d8bf7568a240c38a14e58ee1))
+* **payment:** INT-5754 Stripe UPE Added onError to initialize option to throw error from sdk subscriber ([41909ed](https://github.com/bigcommerce/checkout-js/commit/41909ed584c665a158cf87fad4956e8df8b00f2d))
+* **payment:** INT-5904 Remove formatting for payment method when Mollie ([0eda531](https://github.com/bigcommerce/checkout-js/commit/0eda5310e880ba1b1b83b4d192425bec2c4549de))
+* **payment:** PAYPAL-1416 Add oxxo ticket for PPCP ([b447960](https://github.com/bigcommerce/checkout-js/commit/b447960daa7d51902e90aa595fb252eab3893c49))
+* **payment:** PAYPAL-1466 bump checkout-sdk-js version ([b49613e](https://github.com/bigcommerce/checkout-js/commit/b49613eb5cb5e9239dd52586fd3ea638defa36fa))
+
+
+### Bug Fixes
+
+* **checkout:** ADYEN-480 bump checkout-sdk for the adyen vaulting fix ([4ee7f5d](https://github.com/bigcommerce/checkout-js/commit/4ee7f5d152b5234f5746ab75a9ccabff5f9fc55f))
+* **checkout:** INT-5126 [MPGS] Bump for add delay between calls for 3d ([#878](https://github.com/bigcommerce/checkout-js/issues/878)) ([0fb65bc](https://github.com/bigcommerce/checkout-js/commit/0fb65bca4bfd3396fe75ea36bf8fbf926aed017b))
+* **shipping:** CHECKOUT-6643 Remove or check ([#879](https://github.com/bigcommerce/checkout-js/issues/879)) ([aa60831](https://github.com/bigcommerce/checkout-js/commit/aa60831df20adce87fe958e1f66cab2c9d56453e))
+
 ## [1.220.0](https://github.com/bigcommerce/checkout-js/compare/v1.219.0...v1.220.0) (2022-06-01)
 
 
