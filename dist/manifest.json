@@ -1,10 +1,14 @@
 {
   "version": 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "appVersion": "1.256.2",
 =======
   "appVersion": "1.247.4-prerelease.1661366250315",
 >>>>>>> chore(release): 1.247.4-prerelease.1661366250315 [skip ci]
+=======
+  "appVersion": "1.247.4-prerelease.1661882953080",
+>>>>>>> chore(release): 1.247.4-prerelease.1661882953080 [skip ci]
   "dynamicChunks": {
     "js": [
       "37-6f927204.js",
@@ -47,7 +51,7 @@
 =======
     "runtime-5bdd2add.js",
     "390-eb3a6cca.js",
-    "375-32294083.js",
+    "375-53cdb3a1.js",
     "608-5e0d9010.js",
     "989-ddb08ead.js",
     "checkout-2a0f63b7.js"
