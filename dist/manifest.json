@@ -1,14 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "appVersion": "1.256.2",
-=======
-  "appVersion": "1.247.4-prerelease.1661366250315",
->>>>>>> chore(release): 1.247.4-prerelease.1661366250315 [skip ci]
-=======
-  "appVersion": "1.247.4-prerelease.1661882953080",
->>>>>>> chore(release): 1.247.4-prerelease.1661882953080 [skip ci]
+  "appVersion": "1.247.4-prerelease.1663687404697",
   "dynamicChunks": {
     "js": [
       "37-6f927204.js",
@@ -41,21 +33,12 @@
     ]
   },
   "js": [
-<<<<<<< HEAD
     "runtime-429a9498.js",
     "773-38f4a2fb.js",
-    "375-ce10f9c9.js",
+    "375-768d8248.js",
     "608-4026a4c6.js",
     "957-11c6ab74.js",
     "checkout-59a09c9c.js"
-=======
-    "runtime-5bdd2add.js",
-    "390-eb3a6cca.js",
-    "375-53cdb3a1.js",
-    "608-5e0d9010.js",
-    "989-ddb08ead.js",
-    "checkout-2a0f63b7.js"
->>>>>>> chore(release): 1.247.4-prerelease.1661366250315 [skip ci]
   ],
   "css": [
     "checkout-5875cfd3.css"
