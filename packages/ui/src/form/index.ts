@@ -17,3 +17,4 @@ export {
 } from './LoadingSkeleton';
 export { Label } from './Label';
 export { FormFieldContainer } from './FormFieldContainer';
+export { DynamicInput, DynamicFormFieldType } from './DynamicFormField';

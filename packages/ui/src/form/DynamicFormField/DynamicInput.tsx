@@ -1,10 +1,12 @@
 import { FormFieldItem } from '@bigcommerce/checkout-sdk';
+import classNames from 'classnames';
 import { isDate, noop } from 'lodash';
 import React, { FunctionComponent, memo, useCallback } from 'react';
 import ReactDatePicker from 'react-datepicker';
 
-import { useLocale } from '@bigcommerce/checkout/locale';
+// import { useLocale } from '@bigcommerce/checkout/locale';
 
+import { IconChevronDown } from '../../icon';
 import { CheckboxInput } from '../CheckboxInput';
 import { InputProps } from '../Input';
 import { RadioInput } from '../RadioInput';
@@ -20,6 +22,7 @@ export interface DynamicInputProps extends InputProps {
     rows?: number;
     fieldType?: DynamicFormFieldType;
     options?: FormFieldItem[];
+    useFloatingLabel?: boolean;
 }
 
 const DynamicInput: FunctionComponent<DynamicInputProps> = ({
@@ -29,11 +32,14 @@ const DynamicInput: FunctionComponent<DynamicInputProps> = ({
     onChange = noop,
     options,
     placeholder,
+    useFloatingLabel,
     value,
     ...rest
 }) => {
-    const { date } = useLocale();
-    const { inputFormat } = date || { inputFormat: '' };
+    // FIXME: useLocale must be used within a LocaleContextProvider
+    // const { date } = useLocale();
+    // const { inputFormat } = date || { inputFormat: '' };
+    const inputFormat = '';
     const handleDateChange = useCallback(
         (dateValue: string, event) =>
             onChange({
@@ -49,24 +55,37 @@ const DynamicInput: FunctionComponent<DynamicInputProps> = ({
     switch (fieldType) {
         case DynamicFormFieldType.DROPDOWM:
             return (
-                <select
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/consistent-type-assertions
-                    {...(rest as any)}
-                    className="form-select optimizedCheckout-form-select"
-                    data-test={`${id}-select`}
-                    id={id}
-                    name={name}
-                    onChange={onChange}
-                    value={!value ? '' : value}
-                >
-                    {Boolean(placeholder) && <option value="">{placeholder}</option>}
-                    {options &&
-                        options.map(({ label, value: optionValue }) => (
-                            <option key={optionValue} value={optionValue}>
-                                {label}
-                            </option>
-                        ))}
-                </select>
+                <>
+                    <div
+                        className={classNames(
+                            { 'dropdown-chevron': !useFloatingLabel },
+                            { 'floating-select-chevron': useFloatingLabel },
+                        )}
+                    >
+                        <IconChevronDown />
+                    </div>
+                    <select
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        {...(rest as any)}
+                        className={classNames(
+                            { 'floating-select': useFloatingLabel },
+                            'form-select optimizedCheckout-form-select',
+                        )}
+                        data-test={`${id}-select`}
+                        id={id}
+                        name={name}
+                        onChange={onChange}
+                        value={value === undefined ? '' : value}
+                    >
+                        {!!placeholder && <option value="">{placeholder}</option>}
+                        {options &&
+                            options.map(({ label, value: optionValue }) => (
+                                <option key={optionValue} value={optionValue}>
+                                    {label}
+                                </option>
+                            ))}
+                    </select>
+                </>
             );
 
         case DynamicFormFieldType.RADIO:
